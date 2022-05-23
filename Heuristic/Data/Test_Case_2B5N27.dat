@@ -1,0 +1,43 @@
+SheetConnection sheet("Test_Case_2B5N27.xlsb");
+
+ N from SheetRead(sheet,"'Data'!A2");
+ B from SheetRead(sheet,"'Data'!A5");
+ P = 3;
+ M from SheetRead(sheet,"'Data'!A11");
+
+ aux_input_1 from SheetRead(sheet,"'Data'!E1");
+ arrival_time from SheetRead(sheet,aux_input_1);
+
+ aux_input_2 from SheetRead(sheet,"'Data'!F1");
+ deadline_time from SheetRead(sheet,aux_input_2);
+
+ aux_output_1 from SheetRead(sheet,"'Result Aux'!B1");
+ Result_sched to SheetWrite(sheet,aux_output_1);
+
+ aux_output_2 from SheetRead(sheet,"'Result Aux'!J1");
+ T to SheetWrite(sheet,aux_output_2);
+
+ aux_output_3 from SheetRead(sheet,"'Result Aux'!K1");
+ t to SheetWrite(sheet,aux_output_3);
+
+ aux_output_4 from SheetRead(sheet,"'Result Aux'!L1");
+ Result_sim to SheetWrite(sheet,aux_output_4);
+
+ aux_output_5 from SheetRead(sheet,"'Result Aux'!M1");
+ Pattern_C to SheetWrite(sheet,aux_output_5);
+
+ opt_time to SheetWrite(sheet,"'Result'!E1");
+
+ z to SheetWrite(sheet,"'Result'!H1");
+ d to SheetWrite(sheet,"'Result'!J1");
+
+service_time = [ 
+ //Pattern 1 
+[[ 300.00 300.00 300.00 300.00 300.00 ] [ 4.90 7.62 4.10 10.22 1.96 ] ] 
+
+ //Pattern 2 
+[[ 9.80 15.23 8.20 20.45 3.93 ] [ 9.80 15.23 8.20 20.45 3.93 ] ] 
+
+ //Pattern 3 
+[[ 4.90 7.62 4.10 10.22 1.96 ] [ 300.00 300.00 300.00 300.00 300.00 ] ] 
+];
